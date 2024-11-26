@@ -100,21 +100,28 @@ ul {
   position: fixed;
   width: 100%;
   top: 0;
-  transition: top 0.3s;
+  transition: transform 0.3s ease;
+  /* Ensure smooth transition */
   z-index: 1050;
+  overflow: hidden;
 }
 
 .navbar {
-  transition: top 0.3s;
+  transition: transform 0.3s ease;
+  /* Ensure smooth transition */
   z-index: 1000;
-  top: 40px; /* Adjust this to match the height of the .topbar */
   margin: 0;
   padding: 0;
+  top: 1px;
+  /* Ensure it matches the height of the .topbar */
 }
 
-
-.hidden {
-  top: -50px;
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .topbar {
+    white-space: normal;
+    padding: 10px 5px;
+  }
 }
 
 .navbar-brand {
