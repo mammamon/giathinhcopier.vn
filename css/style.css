@@ -1,14 +1,10 @@
-/*GLOBAL*/
+/* GLOBAL */
 * {
-  font-family: "Open Sans", san-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.5;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  -webkit-transition: all ease 0.5s;
-  -moz-transition: all ease 0.5s;
-  -ms-transition: all ease 0.5s;
-  -o-transition: all ease 0.5s;
   transition: all ease 0.5s;
 }
 
@@ -18,6 +14,8 @@ html {
 
 body {
   background: #e8e8e8;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 100px;
 }
 
 a,
@@ -38,7 +36,7 @@ p,
 h5,
 h6 {
   margin-bottom: 0;
-  font-family: "Montserrat", san-serif;
+  font-family: "Montserrat", sans-serif;
   color: #1d1d1d;
 }
 
@@ -93,85 +91,37 @@ ul {
   -webkit-appearance: none;
 }
 
-
-/*---------------------------------------
-  TYPOGRAPHY               
------------------------------------------*/
-
-/* h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--dark-color);
+/* HEADER */
+.topbar {
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transition: top 0.3s;
+  z-index: 1050;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--title-font-family);
-  font-weight: var(--font-weight-semibold);
+.navbar {
+  transition: top 0.3s;
+  z-index: 1000;
+  top: 40px; /* Adjust this to match the height of the .topbar */
+  margin: 0;
+  padding: 0;
 }
 
-h1 {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-weight-bold);
+
+.hidden {
+  top: -50px;
 }
 
-h2 {
-  font-size: var(--h2-font-size);
-  font-weight: var(--font-weight-bold);
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
-h3 {
-  font-size: var(--h3-font-size);
+.nav-item .nav-link:hover {
+  color: #0056b3;
 }
-
-h4 {
-  font-size: var(--h4-font-size);
-}
-
-h5 {
-  font-size: var(--h5-font-size);
-}
-
-h6 {
-  color: var(--primary-color);
-  font-size: var(--h6-font-size);
-}
-
-p {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-normal);
-}
-
-ul li {
-  color: var(--p-color);
-  font-size: var(--p-font-size);
-  font-weight: var(--font-weight-normal);
-}
-
-a,
-button {
-  touch-action: manipulation;
-  transition: all 0.3s;
-}
-
-a {
-  display: inline-block;
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-a:hover {
-  color: var(--link-hover-color);
-}
-
-b,
-strong {
-  font-weight: var(--font-weight-bold);
-} */
