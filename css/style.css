@@ -56,7 +56,8 @@ h3 {
 }
 
 h4,
-p {
+p,
+a {
   font-size: 1rem;
   font-weight: 400;
 }
@@ -91,35 +92,80 @@ ul {
   -webkit-appearance: none;
 }
 
+.container {
+  padding: 0;
+}
+
 /* HEADER */
 .topbar {
   background-color: #fff;
-  color: #333;
-  padding: 10px;
-  text-align: center;
   position: fixed;
-  width: 100%;
   top: 0;
   transition: transform 0.3s ease;
-  /* Ensure smooth transition */
   z-index: 1050;
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topbar a {
+  color: #1d1d1d;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 0.9rem;
+  position: relative;
+  padding: 5px 10px;
+}
+
+.topbar a::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #ccc;
+}
+
+.topbar a:hover {
+  color: red;
+}
+
+
+.topbar a:last-child::after {
+  display: none;
+}
+
+.topbar i {
+  margin-right: 5px;
+  font-size: 1rem;
+  color: red;
 }
 
 .navbar {
   transition: transform 0.3s ease;
-  /* Ensure smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   margin: 0;
-  padding: 0;
+  padding: 4px;
   top: 1px;
-  /* Ensure it matches the height of the .topbar */
 }
 
-/* Mobile Adjustments */
+@media (max-width: 992px) {
+  .topbar {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .topbar {
-    white-space: normal;
     padding: 10px 5px;
   }
 }
@@ -127,8 +173,45 @@ ul {
 .navbar-brand {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  display: flex;
+  align-items: center;
 }
 
 .nav-item .nav-link:hover {
   color: #0056b3;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.brand-image {
+  height: 3rem;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgb(235, 21, 21);
+  position: absolute;
+  margin-left: 32px;
+  margin-top: -6px;
+  line-height: 24px;
+  font-weight: 900;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.brand-tagline {
+  font-size: 0.5rem;
+  color: #003200;
+  font-style: italic;
+  position: absolute;
+  bottom: -7px;
 }
